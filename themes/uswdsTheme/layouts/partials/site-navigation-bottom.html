@@ -1,0 +1,13 @@
+<nav class="usa-footer__nav" aria-label="Footer navigation">
+    {{ if .Site.Menus.main }}
+    <ul class="grid-row grid-gap">
+        {{ range .Site.Menus.main }}
+        <li class="mobile-lg:grid-col-4 desktop:grid-col-auto usa-footer__primary-content">
+            <a class="usa-footer__primary-link" href="{{ .URL }}}}">
+                {{ .Name }}
+            </a>
+        </li>
+        {{ end}}
+    </ul>
+    {{ end }}
+</nav>
