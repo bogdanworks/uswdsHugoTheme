@@ -1,10 +1,12 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="/css/styles.css">
+    <!-- <link rel="stylesheet" type="text/css" href="/css/styles.css"> -->
     {{ $title := print .Site.Title " | " .Title }}
     {{ if .IsHome }}{{ $title = .Site.Title }}{{ end }}
     <title>{{ $title }}</title>
-    <script src="/assets/js/vendor/uswds-init.min.js"></script>
-    <link rel="preload" href="/assets/js/vendor/uswds.min.js" as="script">
+    {{ $uswdsJsInit := resources.Get "js/uswds-init.js" }}
+    <script src="{{ $uswdsJsInit.Permalink }}"></script>
+    {{ $uswdsStyle := resources.Get "css/styles.css"  }}
+    <link rel="stylesheet preload prefetch" href="{{ $uswdsStyle.Permalink }}" as="script" crossorigin="anonymous">
 </head>
