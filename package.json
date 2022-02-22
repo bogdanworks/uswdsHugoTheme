@@ -29,7 +29,7 @@
     "gulp-svg-sprite": "^1.5.0",
     "postcss": "^8.4.5",
     "postcss-csso": "^5.0.1",
-    "sass": "^1.48.0",
+    "sass": "^1.49.8",
     "uswds": "^2.13.0",
     "uswds-gulp": "github:uswds/uswds-gulp"
   }
